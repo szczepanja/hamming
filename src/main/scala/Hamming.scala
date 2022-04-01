@@ -1,5 +1,12 @@
 object Hamming {
 
-  def hamming(a: String, b: String): Option[Integer] = Some(7)
+  def hamming(leftString: String, rightString: String): Option[Integer] = {
+    if (leftString.length == rightString.length) {
+      Some(leftString
+        .zip(rightString)
+        .count(tuple => tuple._1 != tuple._2))
+    }
+    else None
+  }
 
 }
