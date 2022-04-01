@@ -1,4 +1,4 @@
-object Hamming {
+object Hamming extends App {
 
   def hamming(leftString: String, rightString: String): Option[Integer] = {
     if (leftString.length == rightString.length) {

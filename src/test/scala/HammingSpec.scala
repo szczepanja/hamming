@@ -10,4 +10,8 @@ class HammingSpec extends AnyFlatSpec with should.Matchers {
     hamming("GAGCCTACTAACGGGAT", "CATCGTAATGACGGCCT") shouldBe Some(7)
   }
 
+  "hamming" should "return None if Strings are not equal" in {
+    hamming("GAGCCTAACGGGAT", "CATCCCT") shouldBe None
+  }
+
 }
